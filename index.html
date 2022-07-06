@@ -11,9 +11,18 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div> 
-            <h1>FizzBuzzDOM</h1>
-        </div>
+        <header>
+            <div> 
+                <h1>FizzBuzzDOM</h1>
+            </div>
+            <div>
+                <label for="number_cell">Inserisci il Numero di caselle da generare</label>
+                <input id="number_cell" type="text" placeholder="Numero caselle (max 10.000)" max="10000">
+                <button id="submit" type="submit">Crea Celle</button>
+            </div>
+        </header>
+        <!-- Pagina -->
+        <main id="page"></main>
         <script src="js/main.js"></script>
     </body>
 </html>
