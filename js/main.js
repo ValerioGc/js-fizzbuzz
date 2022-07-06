@@ -1,15 +1,22 @@
+// Definisco variabili bottoni
 const submit = document.getElementById('submit');
 const refresh = document.getElementById('refresh');
+// Event Listner bottone Annulla
 refresh.addEventListener('click',
     function() {
         location.reload()
     });
+// Event Listner bottone genera
 submit.addEventListener('click', 
     function() {
         const container = document.getElementById('page');
         const user_input = parseInt(document.getElementById('number_cell').value); 
         if ((isNaN(user_input)) || (user_input == '')){
             alert('Attenzione! Dati inseriti non corretti')
+            location.reload();
+        }
+        else if (user_input > 10000) {
+            alert('Attenzione! Il numero massimo consentito di celle è 10.000')
             location.reload();
         }
         else {

@@ -1,3 +1,7 @@
+:root {
+    --primary-color: #000;
+    --secondary-color: #fff;
+}
 * {
     box-sizing: border-box;
     margin: 0;
@@ -13,7 +17,7 @@ header {
 }
 h1 {
     font-size: 40px;
-    color: #fff;
+    color:var(--secondary-color);
     text-align: center;
     padding: 20px 0;
 }
@@ -22,20 +26,20 @@ label {
     padding: 20px 0;
     font-size: 18px;
     font-weight: bold;
-    color: #fff;
+    color: var(--secondary-color);
 }
 input, 
 button,
 #page,
 .box {
-    box-shadow: 2px 2px 5px #000;
+    box-shadow: 2px 2px 5px var(--primary-color);
 }
 input {
     display: block;
     width: 250px;
     height: 30px;
     border-radius: 25px;
-    border: 2px solid black;
+    border: 2px solid var(--primary-color);
     margin: auto;
     padding-left: 35px;
     margin-bottom: 20px;
@@ -54,53 +58,79 @@ button:last-child {
 }
 /* Contenitore Generato Automaticamente  */
 #page {
+    display: none;
     width: 70%;
     margin: 30px auto;
     padding: 30px;
-    border: 2px solid black;
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
     background: linear-gradient(70deg, #60053a, #a9309e, #3715ff, #fb612b);
     background-size: 240% 240%;
-    animation: gradient-animation 5s ease infinite;
-    display: none;
-    border-radius: 15px;
+    animation: gradient 4s ease infinite;
+
 }
 .box {
-    border: 2px solid black;
     height: 100px;
     width: 100px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 15px;
+    color: var(--primary-color);
     background-color: #00ff518d;
-    color: #000;
     display: inline-block;
     padding: 10px;
     margin: 20px 10px 0 ;
+    /* Allineamento box */
     vertical-align: middle;
     text-align: center;
     line-height: 84px;
-    font-size: 16px;
-    border-radius: 15px;
-    font-weight: bold;
 }
 /* Tipi di Multipli */
 .fizz {
     background-color: #00000091;
-    color: #fff;
+    color: var(--secondary-color);
+    animation: pulseInv 0.7s linear infinite;
 }
 .buzz {
     background-color: #0000ffc1;
-    color: #fff;
+    color: var(--secondary-color);
+    animation: pulse 0.7s linear infinite;
 }
 .fizzbuzz {
     background-color: #ff0000c1;
+    animation: scale 0.5s ease infinite;
 }
-/* Animazione Background Container celle*/
-@keyframes gradient-animation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+/* Animazioni e Hover*/
+input:hover,
+button:hover {
+    filter: brightness(80%);
+}
+@keyframes gradient {
+    from {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    to {background-position: 0% 50%;}
+}
+@keyframes scale {
+    from {transform: scale(1);}
+    50% {transform: scale(1.1);}
+    to {transform: scale(1);}
+}
+@keyframes pulse {
+    0% {transform: scale(1);}
+    20% {transform: translate(-5px, 0);}
+    35% {transform: translate(0, -5px);}
+    50% {transform: translate(0, 0);}
+    65% {transform: translate(0, 5px); filter: blur(2px)}
+    80% {transform: translate(5px, 0);}
+    100% {transform: scale(1);}
+}
+@keyframes pulseInv {
+    from {transform: scale(1);}
+    20% {transform: translate(5px, 0);}
+    35% {transform: translate(0, 5px); filter: blur(2px)}
+    50% {transform: translate(0, 0);}
+    65% {transform: translate(0, -5px);}
+    80% {transform: translate(-5px, 0);}
+    to {transform: scale(1);}
 }
