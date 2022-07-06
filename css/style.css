@@ -27,12 +27,11 @@ label {
     font-size: 18px;
     font-weight: bold;
     color: var(--secondary-color);
-}
-input, 
+} 
 button,
 #page,
 .box {
-    box-shadow: 2px 2px 5px var(--primary-color);
+    box-shadow: 5px 5px 5px 5px var(--primary-color);
 }
 input {
     display: block;
@@ -43,6 +42,7 @@ input {
     margin: auto;
     padding-left: 35px;
     margin-bottom: 20px;
+    box-shadow: inset -4px 0 10px var(--primary-color);
 }
 button {
     padding: 5px 10px;

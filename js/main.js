@@ -29,16 +29,13 @@ submit.addEventListener('click',
                 if ((i % 3 == 0) && (i % 5 == 0)) {
                     containerInner.className = 'box fizzbuzz';
                     containerInner.innerHTML = 'FizzBuzz';
-                }
-                else if (i % 3 == 0) {
+                } else if (i % 3 == 0) {
                     containerInner.className = 'box fizz';
                     containerInner.innerHTML = 'Fizz';
-                }
-                else if (i % 5 == 0) {
+                } else if (i % 5 == 0) {
                     containerInner.className = 'box buzz';
                     containerInner.innerHTML = 'Buzz';
-                }
-                else {
+                } else {
                     containerInner.className = 'box';
                 }
                 container.append(containerInner);
