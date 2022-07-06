@@ -3,11 +3,11 @@
     margin: 0;
     padding: 0;
 }
-
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #006aff;
+    background-color:#6ca8fc;
 }
+/* Corpo Pagina */
 header {
     text-align: center;
 }
@@ -25,7 +25,9 @@ label {
     color: #fff;
 }
 input, 
-button {
+button,
+#page,
+.box {
     box-shadow: 2px 2px 5px #000;
 }
 input {
@@ -42,6 +44,10 @@ button {
     padding: 5px 10px;
     border-radius: 25px;
     font-weight: bold;
+    margin: 10px;
+}
+button:last-child {
+    color: red;
 }
 .show {
     display: block !important;
@@ -52,14 +58,17 @@ button {
     margin: 30px auto;
     padding: 30px;
     border: 2px solid black;
-    background-color: #fff;
+    background: linear-gradient(70deg, #60053a, #a9309e, #3715ff, #fb612b);
+    background-size: 240% 240%;
+    animation: gradient-animation 5s ease infinite;
     display: none;
+    border-radius: 15px;
 }
 .box {
     border: 2px solid black;
     height: 100px;
     width: 100px;
-    background-color: grey;
+    background-color: #00ff518d;
     color: #000;
     display: inline-block;
     padding: 10px;
@@ -68,15 +77,30 @@ button {
     text-align: center;
     line-height: 84px;
     font-size: 16px;
+    border-radius: 15px;
+    font-weight: bold;
 }
 /* Tipi di Multipli */
-.Fizz {
-    background-color: green;
+.fizz {
+    background-color: #00000091;
+    color: #fff;
 }
-.Buzz {
-    background-color: blue;
+.buzz {
+    background-color: #0000ffc1;
+    color: #fff;
 }
-.FizzBuzz {
-    background-color: red;
+.fizzbuzz {
+    background-color: #ff0000c1;
 }
-
+/* Animazione Background Container celle*/
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
